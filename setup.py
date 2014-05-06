@@ -1,5 +1,5 @@
 import os
-from distutils.core import setup
+from setuptools import setup
 
 def gen_data_files(*dirs):
     """This function makes it easy to copy entire directory trees, which is useful for moving static assets needed by Partify (templates, JS, CSS, etc...).
