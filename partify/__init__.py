@@ -47,7 +47,7 @@ class FlaskWithRouteDocs(Flask):
                 f.__doc__ = "%s\n\n    **Methods:** ``%s``" % (f.__doc__, methods_str)
             return route_dec(f)
         return decorator
-        
+
 
 app = FlaskWithRouteDocs("partify")
 
@@ -85,7 +85,7 @@ def start():
     from partify import admin, history, player, queue, statistics, track, user, vote
     init_db()
     on_startup()
-    
+
     app.logger.debug(app.config)
 
     if app.config.get('PROFILE', False):
